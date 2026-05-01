@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { AdminSidebar } from './AdminDashboard';
 import { menuAPI } from '../../services/api';
+import {BASE_URL} from '../../Config';
 
 const EMPTY_FORM = {
   name: '',
@@ -83,7 +84,7 @@ const load = async () => {
 const getImageUrl = (img) => {
   if (!img) return "";
   if (img.startsWith("http")) return img;
-  return `http://localhost:8080${img}`;
+  return `${BASE_URL}${img}`;
 };
 
   // ✅ EDIT FIXED
@@ -195,7 +196,7 @@ const getImageUrl = (img) => {
                 {/* EXISTING IMAGE (EDIT MODE) */}
                 {selectedItem?.image && (
                   <img
-                    src={`http://localhost:8080${selectedItem.image}?t=${Date.now()}`}
+                    src={`${BASE_URL}${selectedItem.image}?t=${Date.now()}`}
                     alt="current"
                     style={{ width: "100px", marginTop: "10px" }}
                   />
