@@ -1,4 +1,4 @@
-import { BASE_URL } from '../../Config.js';
+export const BASE_URL = "https://foodie-backend-2-yh3v.onrender.com";
 
 const getHeaders = (isJson = true, includeAuth = true) => {
   const token = localStorage.getItem('fodie_token');
