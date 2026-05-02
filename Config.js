@@ -1,0 +1,1 @@
+export const BASE_URL = "https://foodie-backend-2-yh3v.onrender.com";

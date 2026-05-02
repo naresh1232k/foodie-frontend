@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import { menuAPI } from '../services/api';
 import { useCart } from '../context/CartContext';
+import { BASE_URL} from '../../Config';
 
-
-const IMAGE_BASE = "http://localhost:8080/uploads/imgs";
+const IMAGE_BASE = "/uploads/imgs";
 
 const CATEGORIES = ['All', 'Breakfast', 'Bowls', 'Salads', 'Soups', 'Desserts', 'Drinks'];
 
@@ -32,7 +32,7 @@ const Stars = ({ rating }) => (
 const getImageUrl = (img) => {
   if (!img) return "";
   if (img.startsWith("http")) return img;
-  return `http://localhost:8080${img}`;
+  return `${BASE_URL}${img}`;
 };
 
 

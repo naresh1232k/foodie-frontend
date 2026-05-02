@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { AdminSidebar } from './AdminDashboard';
 import { menuAPI } from '../../services/api';
-import {BASE_URL} from '../../Config';
+import { BASE_URL} from '../../../Config';
+
 
 const EMPTY_FORM = {
   name: '',
